@@ -1,0 +1,30 @@
+{% load static %}
+<h1>HOME</h1>
+<style>
+    body {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<body>
+{%block content%}
+{% for post in blogs%}
+<a target="_blank" href="{{post.image.url}}" style="align-items:  center;">
+    <img src="{{post.image.url}}" height="500px" width="700px" /> </a>
+
+{% if post.video %}
+<video src="{{post.video.url}}"></video>
+{% endif %}
+<br>
+<a href="/blog/{{post.id}}">
+{{post.caption}}</a>
+<br>
+<code>{{post.creater}} {{post.created}}</code>
+<code>{{post.topic}}</code>
+<code>Cloud:{{post.cloud}}</code>
+
+{% endfor %}
+{% endblock %}
+</body>

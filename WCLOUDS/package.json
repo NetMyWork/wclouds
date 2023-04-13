@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@ckeditor/ckeditor5-media-embed": "^36.0.1",
+    "ckeditor": "^4.12.1",
+    "ckeditor4": "^4.20.2"
+  }
+}
